@@ -1,0 +1,143 @@
+.result {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.result-header {
+  padding: 0.5rem 0;
+  margin-bottom: 0.5rem;
+}
+
+.result-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.MuiTableHead-root .MuiTableCell-root {
+  background-color: #1e1e1e;
+  font-weight: bold;
+}
+
+.MuiTableRow-root:hover {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.MuiTableContainer-root {
+  max-height: calc(100% - 52px) !important;
+}
+
+.MuiTablePagination-root {
+  color: #e0e0e0;
+}
+
+.result-table {
+  flex: 1;
+  overflow: auto;
+  max-height: calc(100% - 52px);
+}
+
+.table-cell {
+  max-width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.table-cell:hover {
+  white-space: normal;
+  word-wrap: break-word;
+  overflow: visible;
+  position: relative;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.MuiTable-root {
+  table-layout: fixed;
+  min-width: 100vw;
+}
+
+.MuiTableContainer-root {
+  overflow-x: auto !important;
+  width: 100%;
+}
+
+.result-footer {
+  padding: 0.5rem 0;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: var(--mobile-breakpoint)) {
+  .result {
+    min-height: 250px;
+  }
+
+  .result-header {
+    padding: 0.25rem 0;
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+  }
+
+  .table-cell {
+    max-width: 120px;
+    font-size: 0.875rem;
+    padding: 6px 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .MuiTable-root {
+    min-width: 300vw;
+  }
+
+  .MuiTableCell-head {
+    font-size: 0.875rem;
+    padding: 8px;
+    font-weight: 600;
+  }
+
+  .MuiTablePagination-root {
+    font-size: 0.75rem;
+  }
+
+  .result-footer {
+    padding: 0.25rem 0;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: var(--small-mobile-breakpoint)) {
+  .table-cell {
+    max-width: 100px;
+    font-size: 0.8rem;
+    padding: 4px;
+  }
+
+  .MuiTableCell-head {
+    font-size: 0.8rem;
+    padding: 6px 4px;
+  }
+
+  .MuiTableContainer-root {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .MuiTable-root {
+    min-width: 400px;
+  }
+
+  .MuiTablePagination-toolbar {
+    padding: 0 4px;
+  }
+
+  .MuiTablePagination-selectRoot {
+    margin-right: 4px;
+  }
+}

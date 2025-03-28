@@ -1,0 +1,54 @@
+.editor {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.editor-header {
+  padding: 0.5rem 0;
+  margin-bottom: 0.5rem;
+}
+
+.editor-container {
+  flex: 1;
+  overflow: hidden;
+  border: 1px solid #555;
+  border-radius: 4px;
+}
+
+.editor-actions {
+  display: flex;
+  padding: 0.5rem 0;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: var(--mobile-breakpoint)) {
+  .editor {
+    min-height: 250px;
+  }
+
+  .editor-header {
+    padding: 0.25rem 0;
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+  }
+
+  .editor-container {
+    min-height: 180px;
+  }
+
+  .editor-actions {
+    padding: 0.25rem 0;
+    margin-top: 0.25rem;
+  }
+}
+
+@media (max-width: var(--small-mobile-breakpoint)) {
+  .editor {
+    min-height: 200px;
+  }
+
+  .editor-container {
+    min-height: 150px;
+  }
+}
