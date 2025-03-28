@@ -22,7 +22,7 @@
   margin-top: 0.5rem;
 }
 
-@media (max-width: var(--mobile-breakpoint)) {
+@media (max-width: 950px) {
   .editor {
     min-height: 250px;
   }
@@ -43,7 +43,7 @@
   }
 }
 
-@media (max-width: var(--small-mobile-breakpoint)) {
+@media (max-width: 480px) {
   .editor {
     min-height: 200px;
   }
