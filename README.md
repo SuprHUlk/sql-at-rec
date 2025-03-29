@@ -4,89 +4,22 @@ A modern, responsive SQL query builder and visualization tool built with React a
 
 **Live Demo:** [https://sql-at-rec.vercel.app/](https://sql-at-rec.vercel.app/)
 
+**GitHub:** [https://github.com/SuprHUlk/sql-at-rec](https://github.com/SuprHUlk/sql-at-rec)
+
+**Video Walkthrough:** [https://drive.google.com/file/d/119ytVpzTmyF1fFQHYe75Fa07sZKTYTU9/view?usp=sharing](https://drive.google.com/file/d/119ytVpzTmyF1fFQHYe75Fa07sZKTYTU9/view?usp=sharing)
+
 ![SQL Playground Screenshot](https://i.imgur.com/5xJxoCs.png)
 
 ## Table of Contents
 
-- [Installation](#installation)
-- [Features](#features)
 - [Technologies Used](#technologies-used)
-- [Performance Metrics](#performance-metrics)
+- [Architecture Diagram](#architecture-diagram)
 - [Project Structure](#project-structure)
 - [Technical Decisions](#technical-decisions)
+- [Features](#features)
+- [Installation](#installation)
+- [Performance Metrics](#performance-metrics)
 - [Performance Optimizations](#performance-optimizations)
-- [Future Enhancements](#future-enhancements)
-
-## Installation
-
-### Prerequisites
-
-- Node.js (v14.x or later)
-- npm or yarn
-
-### Setup and Run
-
-1. **Clone the repository**
-
-```bash
-git clone https://github.com/your-username/sql-playground.git
-cd sql-playground
-```
-
-2. **Install dependencies**
-
-```bash
-npm install
-```
-
-3. **Start the development server**
-
-```bash
-npm run dev
-```
-
-4. **Build for production**
-
-```bash
-npm run build
-```
-
-5. **Preview production build**
-
-```bash
-npm run preview
-```
-
-## Features
-
-### Core Functionality
-
-- **SQL Editor**: Monaco-based SQL editor with syntax highlighting
-- **Query Results**: Tabulated results with proper formatting and pagination
-- **Sample Data**: Built-in CSV data to run queries against
-- **Example Queries**: Pre-loaded example queries for quick experimentation
-- **Saving Queries**: Save custom queries to browser's localStorage
-- **Responsive Design**: Full support for mobile, tablet, and desktop views
-
-### Advanced Features
-
-- **Query Management**:
-
-  - Save, edit, and delete custom queries
-  - Quick-access to run saved queries
-  - Visual feedback through tooltips and notifications
-
-- **Data Handling**:
-
-  - Automatic data type detection for proper alignment
-  - Numeric formatting for better readability
-  - Hover-to-expand cell content for wide data
-
-- **Accessibility & UX**:
-  - Keyboard navigation support
-  - Tooltips for actions and buttons
-  - Notifications for user actions
-  - Dark theme for reduced eye strain
 
 ## Technologies Used
 
@@ -104,36 +37,6 @@ npm run preview
 
 - **@monaco-editor/react**: React wrapper for Monaco Editor
 - **@mui/material** & **@mui/icons-material**: Material UI components and icons
-
-## Performance Metrics
-
-### Load Time Measurements
-
-The application has been optimized for fast load times, measured using the following methods:
-
-1. **First Contentful Paint (FCP)**: 0.6s
-2. **Largest Contentful Paint (LCP)**: 0.6s
-3. **Total Blocking Time**: 0ms
-4. **Cumulative Layout Shift**: 0
-5. **Speed Index**: 0.8s
-
-These metrics were measured using:
-
-- Lighthouse in Chrome DevTools (Performance score: 100/100, Accessibility: 98/100, Best Practices: 89/100, SEO: 90/100)
-- Web Vitals library integrated into the application
-
-### Mobile Performance
-
-- Performance score: 88/100
-- First Contentful Paint: 2.2s
-- Largest Contentful Paint: 3.0s
-- Total Blocking Time: 240ms
-- Speed Index: 2.7s
-
-### Performance Testing Environment
-
-- Tests conducted on a standard broadband connection (50Mbps)
-- Desktop and mobile devices simulated through Chrome DevTools
 
 ## Project Structure
 
@@ -166,6 +69,10 @@ src/
 │   └── index.js        # App configuration
 └── App.jsx             # Main application component
 ```
+
+## Architecture Diagram
+
+![SQL Playground Screenshot](https://i.imgur.com/mzBCulQ_d.webp?maxwidth=760&fidelity=grand)
 
 ## Technical Decisions
 
@@ -201,6 +108,107 @@ A combination of:
 - Component-scoped CSS files for feature-specific styling
 - Material UI's styled components for dynamic styling
 - CSS variables for consistent theming and breakpoints
+
+## Features
+
+### Core Functionality
+
+- **SQL Editor**: Monaco-based SQL editor with syntax highlighting
+- **Query Results**: Tabulated results with proper formatting and pagination
+- **Sample Data**: Built-in CSV data to run queries against
+- **Example Queries**: Pre-loaded example queries for quick experimentation
+- **Saving Queries**: Save custom queries to browser's localStorage
+- **Responsive Design**: Full support for mobile, tablet, and desktop views
+
+### Advanced Features
+
+- **Query Management**:
+
+  - Save, edit, and delete custom queries
+  - Quick-access to run saved queries
+  - Visual feedback through tooltips and notifications
+
+- **Data Handling**:
+
+  - Automatic data type detection for proper alignment
+  - Numeric formatting for better readability
+  - Hover-to-expand cell content for wide data
+
+- **Accessibility & UX**:
+  - Keyboard navigation support
+  - Tooltips for actions and buttons
+  - Notifications for user actions
+  - Dark theme for reduced eye strain
+
+## Installation
+
+### Prerequisites
+
+- Node.js (v14.x or later)
+- npm or yarn
+
+### Setup and Run
+
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/SuprHUlk/sql-at-rec.git
+cd sql-at-rec
+```
+
+2. **Install dependencies**
+
+```bash
+npm install
+```
+
+3. **Start the development server**
+
+```bash
+npm run dev
+```
+
+4. **Build for production**
+
+```bash
+npm run build
+```
+
+5. **Preview production build**
+
+```bash
+npm run preview
+```
+
+## Performance Metrics
+
+### Load Time Measurements
+
+The application has been optimized for fast load times, measured using the following methods:
+
+1. **First Contentful Paint (FCP)**: 0.6s
+2. **Largest Contentful Paint (LCP)**: 0.6s
+3. **Total Blocking Time**: 0ms
+4. **Cumulative Layout Shift**: 0
+5. **Speed Index**: 0.8s
+
+These metrics were measured using:
+
+- Lighthouse in Chrome DevTools (Performance score: 100/100, Accessibility: 98/100, Best Practices: 89/100, SEO: 90/100)
+- Web Vitals library integrated into the application
+
+### Mobile Performance
+
+- Performance score: 88/100
+- First Contentful Paint: 2.2s
+- Largest Contentful Paint: 3.0s
+- Total Blocking Time: 240ms
+- Speed Index: 2.7s
+
+### Performance Testing Environment
+
+- Tests conducted on a standard broadband connection (50Mbps)
+- Desktop and mobile devices simulated through Chrome DevTools
 
 ## Performance Optimizations
 
