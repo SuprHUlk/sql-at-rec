@@ -23,7 +23,6 @@ function App() {
   });
 
   useEffect(() => {
-    // Update the document title with the app name from config
     document.title = APP_CONFIG.name;
 
     // Fetch and parse the CSV file
